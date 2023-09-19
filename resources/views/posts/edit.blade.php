@@ -1,4 +1,5 @@
 <x-main-layout>
+<link rel="stylesheet" href="{{ asset('css/create-page.css') }}">
 <!DOCTYPE HTML>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -6,7 +7,7 @@
         <title>Diary</title>
     </head>
     <body>
-        <h1>Diary name</h1>
+        
         <form action="/posts" method="POST" enctype="multipart/form-data">　
             @csrf
             <div class="title">
@@ -24,7 +25,7 @@
             <div class="form-group">
                 <h2>Images</h2>
                 <input type="file" name="images[]" id="images" multiple >
-                //画像削除ボタン
+                
                 @foreach($images as $image)
                 <img src="{{ $image->url }}" alt="{{ $image->title }}">
                 @endforeach

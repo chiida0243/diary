@@ -1,4 +1,5 @@
 <x-main-layout>
+<link rel="stylesheet" href="{{ asset('css/create-page.css') }}">
 <!--<!DOCTYPE HTML>-->
 <!--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">-->
     <head>
@@ -6,7 +7,7 @@
         <title>Diary</title>
     </head>
     <body>
-        <h1>Diary name</h1>
+        
         <form action="/posts" method="POST" enctype="multipart/form-data">　
             @csrf
             <div class="title">

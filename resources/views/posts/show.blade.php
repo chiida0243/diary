@@ -1,4 +1,5 @@
 <x-main-layout>
+<link rel="stylesheet" href="{{ asset('css/show-page.css') }}">
 <!DOCTYPE HTML>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

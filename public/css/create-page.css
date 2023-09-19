@@ -1,0 +1,17 @@
+.title,
+.date,
+.place,
+.form-group,
+.about,
+.impression,
+.prefecture {
+    text-align: center; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.about textarea{
+    width: 400px;
+    height: 400px;
+    
+}
