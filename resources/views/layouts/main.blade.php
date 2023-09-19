@@ -19,10 +19,14 @@
 
                 <header class="header shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        <p>旅行しおり</h1>
-                        <h2>mine</h2>
-                        <h3>all</h3>
- 
+                        <h1>旅行しおり</h1>
+                        <nav class="header-nav">
+                            <ul　style="display: flex; list-style: none; padding: 0;">
+                                <li><a href="{{ route('index') }}">Mine</a></li>
+                                <li><a href="{{ route('post.create') }}">Create Posts</a></li>
+                            </ul>
+                        </nav>
+                        
                     </div>
                 </header>
 

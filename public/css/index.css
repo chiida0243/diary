@@ -1,7 +1,18 @@
 .header {
     background-color: rgb(176, 203, 203);
     padding:10px 0;
-    text-align: center;
-    
 }
-.
+
+.header-nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.header-nav li{
+    margin-right: 10px;
+}
+
+.header-nev a{
+    text-decoration: none;
+}
