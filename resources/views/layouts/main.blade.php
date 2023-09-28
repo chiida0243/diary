@@ -24,6 +24,7 @@
                             <ul　style="display: flex; list-style: none; padding: 0;">
                                 <li><a href="{{ route('index') }}">Mine</a></li>
                                 <li><a href="{{ route('post.create') }}">Create Posts</a></li>
+                                <li><a href="{{ route('all.index') }}">all plans</a></li>
                             </ul>
                         </nav>
                         

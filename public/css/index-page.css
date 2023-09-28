@@ -1,0 +1,32 @@
+.midashi
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+/*.title,*/
+/*.user_name,*/
+/*.prefecture_name,*/
+/*.visited_at*/
+.post
+{
+    text-align: center; 
+    align-items: center;
+}
+
+.title
+{
+    font-size: 25px;
+}
+
+.prefecture_name
+{
+    font-size: 18px;
+}
+
+.user_name
+{
+    font-size: 15px;
+}
