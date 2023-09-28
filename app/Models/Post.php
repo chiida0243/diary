@@ -22,6 +22,11 @@ class Post extends Model
     ];
     
     
+    public function user()
+    {
+    return $this->belongsTo(User::class, 'user_id');
+    }
+    
     public function images()
     {
     return $this->belongsToMany(Image::class, 'image_post');

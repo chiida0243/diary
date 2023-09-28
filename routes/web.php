@@ -22,7 +22,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/',[PostController::class,'index'])->name('index');
+    Route::get('/',[PostController::class,'index'])->name('index')->middleware('auth');
     Route::get('/post/create',[PostController::class,'create'])->name('post.create');
     
     Route::get('/posts/{post}',[PostController::class,'show']);
@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
+    Route::get('/plans', [PostController::class, 'allindex'])->name('all.index')->middleware('auth');
     
 });
 

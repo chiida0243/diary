@@ -13,8 +13,16 @@ class PostController extends Controller
 {
     public function index(Post $post)
         {
-            return view('posts.index')->with(['posts' => $post->get()]);
+            $user = auth()->user();
+            $post = Post::where('user_id',$user->id)->orderBy('visited_at','desc')->get();
+            return view('posts.index')->with(['posts' => $post]);
         }
+        
+    public function allindex(Post $post)
+    {
+        $posts = Post::whereNotIn('user_id',[auth()->user()->id])->orderBy('visited_at','desc')->get();
+        return view('plans.allindex')->with(['posts'=>$posts]);
+    }
         
     public function show(Post $post)
         {
@@ -65,6 +73,8 @@ class PostController extends Controller
             }
         // $image = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         }
+        
+    
         
         return redirect('/posts/' . $post->id);
         
